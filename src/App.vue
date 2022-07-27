@@ -35,7 +35,6 @@ nav {
 
   a {
     font-weight: bold;
-    color: goldenrod;
     padding: 0.25rem;
     text-decoration: none;
   }
