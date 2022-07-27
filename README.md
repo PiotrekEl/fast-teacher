@@ -1,5 +1,5 @@
 # fast-teacher
-
+A simple program for learning vocabulary in a foreign language.
 ## Project setup
 ```
 npm install
