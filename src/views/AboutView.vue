@@ -7,6 +7,5 @@
 <style>
 .about {
   margin: 3rem auto;
-  color: goldenrod;
 }
 </style>
