@@ -13,9 +13,9 @@
         <div class="home__frame">
           <label for="answer">
             <input @keyup.enter="checkAnswer" v-model="inputValue" class="home__input" type="text"
-              id="answer" ref="input">
+              id="answer" ref="input" :disabled="disableAnswer">
           </label>
-          <button @click="checkAnswer" class="home__button">
+          <button @click="checkAnswer" class="home__button" :disabled="disableAnswer">
             Check
           </button>
           <div v-show="dialog" @keyup.esc="hideDialog" class="dialog">
@@ -72,6 +72,7 @@ export default {
       randomIdx: 0,
       isCorrect: true,
       dialog: false,
+      disableAnswer: false,
     };
   },
 
@@ -108,7 +109,10 @@ export default {
           if (this.quest.length > 1) {
             this.quest.splice(this.randomIdx, 1);
             this.randomIdx = this.getRandomInt();
-          } else this.inputValue = 'KONIEC :)';
+          } else {
+            this.inputValue = 'THE END';
+            this.disableAnswer = true;
+          }
         }
         this.focusButton();
       } else this.focusInput();
@@ -173,7 +177,7 @@ export default {
     color: white;
     padding: 1rem;
     font-weight: 800;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     border-radius: 5px;
     border: 0;
     margin-top: 1rem;

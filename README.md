@@ -3,6 +3,7 @@ A very simple program for learning vocabulary in a foreign language.
 After entered correct word is removed from the array. If the word is
 incorrect, it stays. Will be back.
 You can entere your words. For example: words.js.
+To change the file with your words to another one, rename the file in HomeView.vue (import modules)
 ## Project setup
 ```
 npm install
@@ -27,5 +28,5 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### TODO list:
--change keys in words file from "d" "pl" to "q" (question) and "a" answer
+-change keys in words file from "d" "pl" to "q" (question) and "a" answer<br />
 -add load words file from app
